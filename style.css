@@ -1,0 +1,46 @@
+/* All the code inside the <style> tags goes into this file */
+
+body {
+    background-color: #1a1a1a; /* Dark gray background */
+    background-image: url('https://www.transparenttextures.com/patterns/dark-metal.png'); /* Metal grid texture */
+    color: #c5c5c5; /* Off-white text */
+    font-family: 'Verdana', 'Geneva', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container to simulate old screen resolutions */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 2px solid #de9a3f; /* CS Orange border */
+    background-color: #0a0a0a;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+/* Header with a flashy marquee */
+header h1 {
+    font-size: 2em;
+    color: #de9a3f; /* CS Orange */
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #000;
+    margin: 10px 0;
+}
+
+marquee {
+    color: #32cd32; /* Lime Green */
+    font-weight: bold;
+    font-size: 1em;
+    background-color: #000;
+    padding: 5px;
+    border: 1px inset #444;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ... and all the other styles like nav, .page, footer, etc. would continue here ... */
