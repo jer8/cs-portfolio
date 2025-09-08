@@ -1,4 +1,4 @@
-/* All the code inside the <style> tags goes into this file */
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
 body {
     background-color: #1a1a1a; /* Dark gray background */
@@ -12,6 +12,8 @@ body {
 
 /* Main container to simulate old screen resolutions */
 .container {
+    position: relative; /* This is needed for the edge effect */
+    overflow: hidden; /* This keeps the glow contained */
     width: 90%;
     max-width: 800px;
     margin: 20px auto;
@@ -23,13 +25,13 @@ body {
 
 /* Header with a flashy marquee */
 header h1 {
-    font-size: 2em;
-    color: #de9a3f; /* CS Orange */
+    font-size: 2.8em;
+    color: #e0e0e0;
     text-align: center;
-    font-family: 'Arial Black', sans-serif;
-    letter-spacing: 2px;
+    font-family: 'Black Ops One', sans-serif;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    text-shadow: 2px 2px #000;
+    text-shadow: 4px 4px 3px #000, 0 0 10px #000;
     margin: 10px 0;
 }
 
@@ -43,4 +45,238 @@ marquee {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* ... and all the other styles like nav, .page, footer, etc. would continue here ... */
+/* Navigation styled like old-school buttons */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #222; /* Dark gray background */
+    padding: 8px;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+}
+
+nav a {
+    color: #de9a3f;
+    text-decoration: none;
+    padding: 5px 6px;
+    margin: 0 2px;
+    border: 1px outset #555;
+    background-color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+nav a:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+nav a:active, nav a.active {
+    border-style: inset;
+    background-color: #de9a3f;
+    color: #000;
+}
+
+/* Section styling */
+.page {
+    border: 1px solid #333;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(10,10,10,0.5);
+    display: none; /* Pages are hidden by default */
+}
+
+.page h2 {
+    font-size: 1.5em;
+    color: #de9a3f; /* CS Orange */
+    text-align: left;
+    border-bottom: 1px solid #de9a3f; /* Orange */
+    padding-bottom: 5px;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-family: 'Arial Black', sans-serif;
+}
+
+/* Classic hyperlinks */
+a {
+    color: #ffbf00; /* Bright gold links */
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #b08d57; /* Darker gold for visited links */
+}
+
+/* For the project list */
+ul {
+    list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAAXNSR0IArs4c6QAAADBJREFUGFc1jDECQwEAA5kQE8AF2IAncQFMwAUs4AmmYAIWiIAK2OAD3U4b/e5D99ehEEQdUggYGRgA/wAAb/QDz706YjgAAAAASUVORK5CYII='); /* Bullet hole bullet point */
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Footer elements */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2px solid #de9a3f;
+    padding-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.visitor-counter {
+    display: inline-block;
+    background-color: #000;
+    border: 1px inset #444;
+    padding: 5px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    color: #32cd32; /* Lime Green */
+    letter-spacing: 4px;
+}
+
+/* Styles for the home page */
+.profile-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    align-items: flex-start;
+}
+
+.profile-pic {
+    border: 2px solid #de9a3f;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.profile-text p {
+    margin-top: 0;
+}
+
+.page h3 {
+    font-size: 1.2em;
+    color: #de9a3f;
+    border-bottom: 1px dotted #555;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex; /* Flexbox for icon alignment */
+    align-items: center; /* Vertically center icon and text */
+    gap: 10px; /* Space between icon and text */
+}
+
+.section-icon {
+    width: 24px;
+    height: 24px;
+    fill: #de9a3f; /* Set the icon color */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.info-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.info-section {
+    flex: 1;
+    min-width: calc(50% - 10px);
+    background-color: rgba(0,0,0,0.3);
+    padding: 15px;
+    border: 1px solid #333;
+}
+
+.info-section ul {
+    margin-top: 0;
+    padding-left: 30px; /* Keep consistent with other lists */
+}
+
+.info-section p {
+    line-height: 1.6;
+}
+
+.info-section-full {
+    margin-top: 15px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 15px;
+    border: 1px solid #333;
+}
+
+.status-active {
+    color: #32cd32; /* Lime Green */
+    font-weight: bold;
+    text-shadow: 0 0 5px #32cd32;
+}
+
+/* Blinking text animation */
+@keyframes blink {
+    50% { opacity: 0.2; }
+}
+.blinking-text {
+    animation: blink 1.2s linear infinite;
+}
+
+.site-badges {
+    margin-top: 20px;
+    text-align: center;
+}
+.site-badges img {
+    margin: 0 5px;
+}
+
+
+/* --- NEW --- Strobing Edge Effect Styles */
+.container.home-active::before,
+.container.home-active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    /* A vibrant neon gradient */
+    background: linear-gradient(180deg, #8a2be2, #ff00ff, #00ffff, #ff00ff, #8a2be2);
+    background-size: 100% 400%; /* Stretches the gradient for a smoother animation */
+    animation: strobe-effect 4s linear infinite;
+    z-index: 1;
+    /* Adds a glow effect to the light bars */
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.container.home-active::before {
+    left: 0;
+}
+
+.container.home-active::after {
+    right: 0;
+}
+
+/* The animation for the strobing and fading */
+@keyframes strobe-effect {
+    0% {
+        opacity: 0.6;
+        background-position: 0% 0%;
+    }
+    50% {
+        opacity: 1;
+        background-position: 0% 100%;
+    }
+    100% {
+        opacity: 0.6;
+        background-position: 0% 0%;
+    }
+}
+
