@@ -22,9 +22,22 @@ function showPage(pageId) {
     if (activeLink) {
         activeLink.classList.add('active');
     }
+
+    // --- NEW ---
+    // Add a class to the main container when the homepage is active.
+    // This allows the CSS to target it for the special edge effect.
+    const container = document.querySelector('.container');
+    if (container) {
+        if (pageId === 'about') {
+            container.classList.add('home-active');
+        } else {
+            container.classList.remove('home-active');
+        }
+    }
 }
 
 // Show the initial page on load
 document.addEventListener('DOMContentLoaded', function() {
     showPage('about');
 });
+
